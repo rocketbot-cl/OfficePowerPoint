@@ -1,0 +1,666 @@
+{
+    "author": "Danilo Toro - Rocketbot - <danilo.toro@rocketbot.cl>",
+    "description": "Modulo para controlar Microsoft Office Power Point",
+    "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
+    "version": "0.1",
+    "license": "MIT",
+    "homepage": "http://rocketbot.co/",
+    "linux": true,
+    "windows": true,
+    "mac": true,
+    "docker": true,
+    "name": "OfficePowerPoint",
+    "dependencies": {},
+    "title": {
+        "en": "Office PowerPoint",
+        "es": "Office PowerPoint",
+        "cn": "Office PowerPoint"
+    },
+    "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
+    "children": [
+        {
+            "en": {
+                "title": "New presentation",
+                "description": "Create a new Power Point presentation",
+                "title_options": null,
+                "options": null
+            },
+            "es": {
+                "title": "Nueva presentación",
+                "description": "Crea un nueva presentación Power Point",
+                "title_options": null,
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": []
+            },
+            "video_youtube": "",
+            "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
+            "module": "new",
+            "module_name": "OfficePowerPoint",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows": true,
+            "mac": true,
+            "docker": true
+        },
+        {
+            "en": {
+                "title": "Open Presentation",
+                "description": "Open a Power Point presentation.",
+                "title_options": null,
+                "options": null
+            },
+            "es": {
+                "title": "Abrir presentación",
+                "description": "Abre una presentación Power Point",
+                "title_options": null,
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": [
+                    {
+                        "type": "file_select",
+                        "placeholder": {
+                            "es": "archivo.pptx",
+                            "en": "file.pptx"
+                        },
+                        "title": {
+                            "es": "Archivo:",
+                            "en": "File:"
+                        },
+                        "help": {
+                            "es": "Seleccione el archivo de Power Point para abrir",
+                            "en": "Select Power Point file to open"
+                        },
+                        "id": "path",
+                        "css": "col-md-12"
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
+            "module": "open",
+            "module_name": "OfficePowerPoint",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows": true,
+            "mac": true,
+            "docker": true
+        },
+        {
+            "en": {
+                "title": "Save presentación",
+                "description": "Save a opened Power Point presentation",
+                "title_options": null,
+                "options": null
+            },
+            "es": {
+                "title": "Guardar presentación",
+                "description": "Guarda el presentación Power Point abierto",
+                "title_options": null,
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": [
+                    {
+                        "type": "file_new",
+                        "placeholder": {
+                            "es": "archivo.pptx",
+                            "en": "file.pptx"
+                        },
+                        "title": {
+                            "es": "Guardar archivo",
+                            "en": "Save file"
+                        },
+                        "id": "path",
+                        "css": "col-md-12"
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
+            "module": "save",
+            "module_name": "OfficePowerPoint",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows": true,
+            "mac": true,
+            "docker": true
+        },
+        {
+            "en": {
+                "title": "Add Slide",
+                "description": "Add a new slide to the presentation",
+                "title_options": null,
+                "options": null
+            },
+            "es": {
+                "title": "Insertar diapositiva",
+                "description": "Inserta una nueva diapositiva a la presentación",
+                "title_options": null,
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": [
+                    {
+                        "type": "select",
+                        "placeholder": {
+                            "es": "",
+                            "en": ""
+                        },
+                        "title": {
+                            "es": "Tipo",
+                            "en": "Type"
+                        },
+                        "options": [
+                            {
+                                "title": "Título y Subtítulo",
+                                "value": "Title Slide"
+                            },
+                            {
+                                "title": "Título y contenido",
+                                "value": "Title and Content"
+                            },
+                            {
+                                "title": "Texto y título",
+                                "value": "Section Header"
+                            },
+                            {
+                                "title": "Dos contenidos",
+                                "value": "Two Content"
+                            },
+                            {
+                                "title": "Comparación",
+                                "value": "Comparison"
+                            },
+                            {
+                                "title": "Título",
+                                "value": "Title Only"
+                            },
+                            {
+                                "title": "Blanco",
+                                "value": "Blank"
+                            },
+                            {
+                                "title": "Contenido con texto",
+                                "value": "Content with Caption"
+                            },
+                            {
+                                "title": "Imagen con texto",
+                                "value": "Picture with Caption"
+                            }
+                        ],
+                        "id": "type",
+                        "css": "col-md-6"
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
+            "module": "new_slide",
+            "module_name": "OfficePowerPoint",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows": true,
+            "mac": true,
+            "docker": true
+        },
+        {
+            "en": {
+                "title": "Write in presentation",
+                "description": "Write in a Power Point presentation.",
+                "title_options": null,
+                "options": null
+            },
+            "es": {
+                "title": "Escribir en presentación",
+                "description": "Escribe en una presentación Power Point.",
+                "title_options": null,
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": [
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "Lorem ipsum ",
+                            "en": "Lorem ipsum "
+                        },
+                        "title": {
+                            "es": "Escriba texto",
+                            "en": "Write text"
+                        },
+                        "help": {
+                            "en": "Separate each paragraph with \\n",
+                            "es": "Separe cada párrafo con \\n"
+                        },
+                        "id": "text",
+                        "css": "col-md-12"
+                    },
+                    {
+                        "type": "select",
+                        "placeholder": {
+                            "es": "",
+                            "en": ""
+                        },
+                        "title": {
+                            "es": "Tipo de texto",
+                            "en": "Text type"
+                        },
+                        "options": [
+                            {
+                                "title": "Título",
+                                "value": "title"
+                            },
+                            {
+                                "title": "subtítulo",
+                                "value": "subtitle"
+                            },
+                            {
+                                "title": "Contenido 1",
+                                "value": "content placeholder 1"
+                            },
+                            {
+                                "title": "Contenido 2",
+                                "value": "content placeholder 2"
+                            },
+                            {
+                                "title": "Texto",
+                                "value": "text placeholder"
+                            }
+                        ],
+                        "id": "type",
+                        "css": "col-md-4"
+                    },
+                    {
+                        "type": "select",
+                        "placeholder": {
+                            "es": "",
+                            "en": ""
+                        },
+                        "title": {
+                            "es": "Tamaño de fuente",
+                            "en": "Font size"
+                        },
+                        "options": [
+                            {
+                                "title": "8",
+                                "value": "8"
+                            },
+                            {
+                                "title": "9",
+                                "value": "9"
+                            },
+                            {
+                                "title": "10",
+                                "value": "10"
+                            },
+                            {
+                                "title": "11",
+                                "value": "11"
+                            },
+                            {
+                                "title": "12",
+                                "value": "12"
+                            },
+                            {
+                                "title": "14",
+                                "value": "14"
+                            },
+                            {
+                                "title": "16",
+                                "value": "16"
+                            },
+                            {
+                                "title": "18",
+                                "value": "18"
+                            },
+                            {
+                                "title": "20",
+                                "value": "20"
+                            },
+                            {
+                                "title": "22",
+                                "value": "22"
+                            },
+                            {
+                                "title": "24",
+                                "value": "24"
+                            },
+                            {
+                                "title": "26",
+                                "value": "26"
+                            },
+                            {
+                                "title": "28",
+                                "value": "28"
+                            },
+                            {
+                                "title": "36",
+                                "value": "36"
+                            },
+                            {
+                                "title": "48",
+                                "value": "48"
+                            },
+                            {
+                                "title": "72",
+                                "value": "72"
+                            }
+                        ],
+                        "id": "size",
+                        "css": "col-md-4"
+                    },
+                    {
+                        "type": "select",
+                        "placeholder": {
+                            "es": "",
+                            "en": ""
+                        },
+                        "title": {
+                            "es": "Alineación",
+                            "en": "Align"
+                        },
+                        "options": [
+                            {
+                                "title": "A la Izquierda",
+                                "value": "left"
+                            },
+                            {
+                                "title": "Centrado",
+                                "value": "center"
+                            },
+                            {
+                                "title": "A la Derecha",
+                                "value": "right"
+                            },
+                            {
+                                "title": "Justificado",
+                                "value": "justify"
+                            }
+                        ],
+                        "id": "align",
+                        "css": "col-md-4"
+                    },
+                    {
+                        "type": "select",
+                        "placeholder": {
+                            "es": "",
+                            "en": ""
+                        },
+                        "title": {
+                            "es": "Negrita",
+                            "en": "Bold"
+                        },
+                        "options": [
+                            {
+                                "title": "Si",
+                                "value": "True"
+                            },
+                            {
+                                "title": "No",
+                                "value": "False"
+                            }
+                        ],
+                        "id": "bold",
+                        "css": "col-md-4"
+                    },
+                    {
+                        "type": "select",
+                        "placeholder": {
+                            "es": "",
+                            "en": ""
+                        },
+                        "title": {
+                            "es": "Cursiva",
+                            "en": "Italic"
+                        },
+                        "options": [
+                            {
+                                "title": "Si",
+                                "value": "True"
+                            },
+                            {
+                                "title": "No",
+                                "value": "False"
+                            }
+                        ],
+                        "id": "italic",
+                        "css": "col-md-4"
+                    },
+                    {
+                        "type": "select",
+                        "placeholder": {
+                            "es": "",
+                            "en": ""
+                        },
+                        "title": {
+                            "es": "Subrayar",
+                            "en": "Underline"
+                        },
+                        "options": [
+                            {
+                                "title": "Si",
+                                "value": "True"
+                            },
+                            {
+                                "title": "No",
+                                "value": "False"
+                            }
+                        ],
+                        "id": "underline",
+                        "css": "col-md-4"
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
+            "module": "write",
+            "module_name": "OfficePowerPoint",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows": true,
+            "mac": true,
+            "docker": true
+        },
+        {
+            "en": {
+                "title": "Close presentation",
+                "description": "Close the presentation that is running",
+                "title_options": null,
+                "options": null
+            },
+            "es": {
+                "title": "Cerrar presentación",
+                "description": "Cierra la presentación que se está ejecutando",
+                "title_options": null,
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": []
+            },
+            "video_youtube": "",
+            "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
+            "module": "close",
+            "module_name": "OfficePowerPoint",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows": true,
+            "mac": true,
+            "docker": true
+        },
+        {
+            "en": {
+                "title": "Add Picture",
+                "description": "Add an image to the presentation.",
+                "title_options": null,
+                "options": null
+            },
+            "es": {
+                "title": "Agregar imagen",
+                "description": "Agrega una imagen a la presentación",
+                "title_options": null,
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": [
+                    {
+                        "type": "file_select",
+                        "placeholder": {
+                            "es": "imagen.jpg",
+                            "en": "image.jpg"
+                        },
+                        "title": {
+                            "es": "Ruta de la imagen",
+                            "en": "Image path"
+                        },
+                        "id": "img_path",
+                        "css": "col-md-12"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "2,4.5 ",
+                            "en": "2,4.5 "
+                        },
+                        "title": {
+                            "es": "Posición",
+                            "en": "Position"
+                        },
+                        "help": {
+                            "en": "First number will be upper margin, the second will be left margin",
+                            "es": "Primer número será margen superior, el segundo será margen izquierdo"
+                        },
+                        "id": "position",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "5",
+                            "en": "5"
+                        },
+                        "title": {
+                            "es": "Alto",
+                            "en": "Height"
+                        },
+                        "help": {
+                            "en": "The image will keep the proportions.",
+                            "es": "La imagen mantendrá las proporciones."
+                        },
+                        "id": "height",
+                        "css": "col-md-6"
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
+            "module": "add_pic",
+            "module_name": "OfficePowerPoint",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows": true,
+            "mac": true,
+            "docker": true
+        },
+        {
+            "en": {
+                "title": "Add textbox",
+                "description": "Add a textbox to the presentation.",
+                "title_options": null,
+                "options": null
+            },
+            "es": {
+                "title": "Agregar cuadro de texto",
+                "description": "Agrega un cuadro de texto a la presentación",
+                "title_options": null,
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": [
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "lorem ipsum",
+                            "en": "lorem ipsum"
+                        },
+                        "title": {
+                            "es": "Texto",
+                            "en": "Text"
+                        },
+                        "id": "text",
+                        "css": "col-md-12"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "x, y",
+                            "en": "x,y"
+                        },
+                        "title": {
+                            "es": "Posición",
+                            "en": "Position"
+                        },
+                        "id": "position",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "ancho, alto",
+                            "en": "width, height"
+                        },
+                        "title": {
+                            "es": "Dimensiones",
+                            "en": "size"
+                        },
+                        "id": "size",
+                        "css": "col-md-6 "
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
+            "module": "addTextbox",
+            "module_name": "OfficePowerPoint",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": true,
+            "windows": true,
+            "mac": true,
+            "docker": true
+        }
+    ]
+}
