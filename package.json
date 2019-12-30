@@ -10,7 +10,9 @@
     "mac": true,
     "docker": true,
     "name": "OfficePowerPoint",
-    "dependencies": {},
+    "dependencies": {
+        "python-pptx": "0.6.18"
+    },
     "title": {
         "en": "Office PowerPoint",
         "es": "Office PowerPoint",
