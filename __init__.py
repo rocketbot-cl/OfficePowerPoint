@@ -55,26 +55,43 @@ global slide
 global slide_layout
 
 if module == "new":
-    prs = Presentation()
+    try:
+        prs = Presentation()
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        PrintException()
+        raise e
+
 
 if module == "open":
-    path = GetParams("path")
-
-    prs = Presentation(path)
+    try:
+        path = GetParams("path")
+        prs = None
+        prs = Presentation(path)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        PrintException()
+        raise e
 
 elif module == "new_slide":
     name = GetParams("type")
-
-    slide_layout = prs.slide_layouts.get_by_name(name)
-    slide = prs.slides.add_slide(slide_layout)
+    try:
+        slide_layout = prs.slide_layouts.get_by_name(name)
+        slide = prs.slides.add_slide(slide_layout)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        PrintException()
+        raise e
 
 elif module == "save":
-
     path = GetParams("path")
-
-    if path:
-        prs.save(path)
-
+    try:
+        if path:
+            prs.save(path)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        PrintException()
+        raise e
 elif module == "write":
     text = GetParams("text").replace("\\n", "\n")
     type_ = GetParams("type")
@@ -84,18 +101,15 @@ elif module == "write":
     ital = GetParams("italic")
     under = GetParams("underline")
 
-
-
-    if align == "left":
-        align = PP_ALIGN.LEFT
-    elif align == "center" or None:
-        align = PP_ALIGN.CENTER
-    elif align == "right":
-        align = PP_ALIGN.RIGHT
-    elif align == "justify":
-        align = PP_ALIGN.JUSTIFY
-
     try:
+        if align == "left":
+            align = PP_ALIGN.LEFT
+        elif align == "center" or None:
+            align = PP_ALIGN.CENTER
+        elif align == "right":
+            align = PP_ALIGN.RIGHT
+        elif align == "justify":
+            align = PP_ALIGN.JUSTIFY
 
         if size:
             size = Pt(int(size))
@@ -135,13 +149,15 @@ elif module == "close":
 elif module == "add_pic":
 
     img_path = GetParams("img_path")
+    index = GetParams("slide")
     pos = GetParams("position")
     height = GetParams("height")
-
-    placeholders = slide.shapes.placeholders
-
-    print(slide_layout.name)
     try:
+        placeholders = slide.shapes.placeholders
+        if index:
+            placeholders = slide.shapes[int(index)]
+
+        print(slide_layout.name)
         if slide_layout.name == "Picture with Caption":
             for placeholder in placeholders:
                 if "picture" in placeholder.name.lower():
@@ -178,7 +194,40 @@ elif module == "addTextbox":
         PrintException()
         raise e
 
+if module == "editText":
+    try:
+        search_by = GetParams("searchBy")
+        index = GetParams("slide")
+        shape_index = GetParams("shape")
+        text = GetParams("text")
 
+        if search_by == "id":
+            slide = prs.slides.get(index)
+        if search_by == "position":
+            slide = prs.slides[int(index)]
+        shape_index = int(shape_index)
+        slide.shapes[shape_index].text_frame.text = text
+
+    except Exception as e:
+        PrintException()
+        raise e
+
+
+if module == "listSlides":
+    res = GetParams("res")
+    slide_index = int(GetParams("slide_index"))
+    try:
+        text_runs = []
+        slide = prs.slides[slide_index]
+        for index, shape in enumerate(slide.shapes):
+            if shape.has_text_frame:
+                value = (index, shape.text)
+                text_runs.append(value)
+        SetVar(res, text_runs)
+    except Exception as e:
+        print("\x1B[" + "31;40mError\x1B[" + "0m")
+        PrintException()
+        raise e
 
 
 
