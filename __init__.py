@@ -88,14 +88,17 @@ elif module == "get_slides_types":
 
 
 elif module == "new_slide":
-    name = GetParams("type")
+    name = GetParams("type")    
     try:
-        list_slide_spanish = ['Diapositiva de título', 'Título y objetos', 'Encabezado de sección', 'Dos objetos', 'Comparación', 'Solo el título', 'En blanco', 'Contenido con título', 'Imagen con título', 'Título y texto vertical', 'Título vertical y texto']
-        list_slide_english = ['Title Slide', 'Title and Content', 'Section Header', 'Two Content', 'Comparison', 'Title Only', 'Blank', 'Content with Caption', 'Picture with Caption', 'Title and Vertical Text', 'Vertical Title and Text']
-        index_english = list_slide_spanish.index(name)
+        list_types = []
+        for type_slide in prs.slide_layouts:
+            list_types.append(type_slide.name)
+        try:
+            name = int(name)
+            name = list_types[name]
+        except ValueError: 
+            pass
         slide_layout = prs.slide_layouts.get_by_name(name)
-        if slide_layout == None:
-            slide_layout = prs.slide_layouts.get_by_name(list_slide_english[index])
         slide = prs.slides.add_slide(slide_layout)
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
@@ -177,6 +180,7 @@ elif module == "add_pic":
             print(len(slide.shapes))
             print(slide.shapes)
             placeholders = slide.shapes[int(index)]
+            
 
         print(slide_layout.name)
         if slide_layout.name == "Picture with Caption":

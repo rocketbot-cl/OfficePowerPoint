@@ -211,47 +211,47 @@
             "options": [
               {
                 "title": "Diapositiva de título",
-                "value": "Diapositiva de título"
+                "value": "0"
               },
               {
                 "title": "Título y objetos",
-                "value": "Título y objetos"
+                "value": "1"
               },
               {
                 "title": "Encabezado de sección",
-                "value": "Encabezado de sección"
+                "value": "2"
               },
               {
                 "title": "Dos objetos",
-                "value": "Dos objetos"
+                "value": "3"
               },
               {
                 "title": "Comparación",
-                "value": "Comparación"
+                "value": "4"
               },
               {
                 "title": "Solo el título",
-                "value": "Solo el título"
+                "value": "5"
               },
               {
                 "title": "En blanco",
-                "value": "En blanco"
+                "value": "6"
               },
               {
                 "title": "Contenido con título",
-                "value": "Contenido con título"
+                "value": "7"
               },
               {
                 "title": "Imagen con título",
-                "value": "Imagen con título"
+                "value": "8"
               },
               {
                 "title": "Título y texto vertical",
-                "value": "Título y texto vertical"
+                "value": "9"
               },
               {
                 "title": "Título vertical y texto",
-                "value": "Título vertical y texto"
+                "value": "10"
               }
             ],
             "id": "type",
