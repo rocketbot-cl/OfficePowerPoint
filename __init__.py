@@ -98,7 +98,9 @@ elif module == "new_slide":
             name = list_types[name]
         except ValueError: 
             pass
+        print("name",name)
         slide_layout = prs.slide_layouts.get_by_name(name)
+        print("slide_layout",slide_layout)
         slide = prs.slides.add_slide(slide_layout)
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
@@ -176,14 +178,10 @@ elif module == "add_pic":
     height = GetParams("height")
     try:
         placeholders = slide.shapes.placeholders
-        if index:
-            print(len(slide.shapes))
-            print(slide.shapes)
-            placeholders = slide.shapes[int(index)]
-            
-
-        print(slide_layout.name)
-        if slide_layout.name == "Picture with Caption":
+        list_types = []
+        for type_slide in prs.slide_layouts:
+            list_types.append(type_slide.name)
+        if slide_layout.name == list_types[8]:
             for placeholder in placeholders:
                 if "picture" in placeholder.name.lower():
                     placeholder.insert_picture(img_path)
