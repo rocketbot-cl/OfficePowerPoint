@@ -27,14 +27,15 @@ import os
 import sys
 
 base_path = tmp_global_obj["basepath"]
-cur_path = base_path + 'modules' + os.sep + 'OfficePowerPoint' + os.sep + 'libs' + os.sep
+cur_path = base_path + 'modules' + os.sep + \
+    'OfficePowerPoint' + os.sep + 'libs' + os.sep
 sys.path.append(cur_path)
-
-from pptx import Presentation
-from pptx.enum.text import PP_ALIGN
-from pptx.util import Pt
-
 docto = os.path.join(cur_path.replace("libs", "bin"), "docto.exe")
+
+from pptx.util import Pt
+from pptx.enum.text import PP_ALIGN
+from pptx import Presentation
+
 
 def makeTmpDir(name):
     try:
@@ -72,6 +73,19 @@ if module == "open":
         print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
         raise e
+
+elif module == "get_slides_types":
+    res = GetParams("res")
+    list_types = []
+    try:
+        for type_slide in prs.slide_layouts:
+            list_types.append(type_slide.name)
+    except Exception as e:
+        print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
+        PrintException()
+        raise e
+    SetVar(res, list_types)
+
 
 elif module == "new_slide":
     name = GetParams("type")
@@ -155,6 +169,8 @@ elif module == "add_pic":
     try:
         placeholders = slide.shapes.placeholders
         if index:
+            print(len(slide.shapes))
+            print(slide.shapes)
             placeholders = slide.shapes[int(index)]
 
         print(slide_layout.name)
@@ -167,7 +183,8 @@ elif module == "add_pic":
             top, left = Pt(float(top)), Pt(float(left))
             if height:
                 height = Pt(float(height))
-                pic = slide.shapes.add_picture(img_path, left=left, top=top, height=height)
+                pic = slide.shapes.add_picture(
+                    img_path, left=left, top=top, height=height)
             else:
                 pic = slide.shapes.add_picture(img_path, left=left, top=top)
     except Exception as e:
@@ -188,7 +205,6 @@ elif module == "addTextbox":
 
         txt_box = slide.shapes.add_textbox(pos[0], pos[1], pos[2], pos[3])
         txt_box.text_frame.text = text
-
 
     except Exception as e:
         PrintException()
@@ -228,6 +244,3 @@ if module == "listSlides":
         print("\x1B[" + "31;40mError\x1B[" + "0m")
         PrintException()
         raise e
-
-
-

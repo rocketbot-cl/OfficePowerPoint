@@ -142,6 +142,48 @@
     },
     {
       "en": {
+        "title": "Get slide types",
+        "description": "Get slide types",
+        "title_options": null,
+        "options": null
+      },
+      "es": {
+        "title": "Obtener tipo de diapostiva",
+        "description": "Obtiene una lista de todos los tipos de diapositivas que existen",
+        "title_options": null,
+        "options": null
+      },
+      "form": {
+        "css": "modal-lg",
+        "inputs": [{
+          "type": "input",
+          "placeholder": {
+              "es": "res ",
+              "en": "res "
+            },
+            "title": {
+              "es": "Resultado",
+              "en": "Resultt"
+            },
+            "id": "res",
+            "css": "col-md-12"}
+        ]
+      },
+      "video_youtube": "",
+      "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
+      "module": "get_slides_types",
+      "module_name": "OfficePowerPoint",
+      "visible": true,
+      "options": false,
+      "father": "module",
+      "group": "scripts",
+      "linux": true,
+      "windows": true,
+      "mac": true,
+      "docker": true
+    },
+    {
+      "en": {
         "title": "Add Slide",
         "description": "Add a new slide to the presentation",
         "title_options": null,
@@ -168,40 +210,48 @@
             },
             "options": [
               {
-                "title": "Título y Subtítulo",
-                "value": "Title Slide"
+                "title": "Diapositiva de título",
+                "value": "Diapositiva de título"
               },
               {
-                "title": "Título y contenido",
-                "value": "Title and Content"
+                "title": "Título y objetos",
+                "value": "Título y objetos"
               },
               {
-                "title": "Texto y título",
-                "value": "Section Header"
+                "title": "Encabezado de sección",
+                "value": "Encabezado de sección"
               },
               {
-                "title": "Dos contenidos",
-                "value": "Two Content"
+                "title": "Dos objetos",
+                "value": "Dos objetos"
               },
               {
                 "title": "Comparación",
-                "value": "Comparison"
+                "value": "Comparación"
               },
               {
-                "title": "Título",
-                "value": "Title Only"
+                "title": "Solo el título",
+                "value": "Solo el título"
               },
               {
-                "title": "Blanco",
-                "value": "Blank"
+                "title": "En blanco",
+                "value": "En blanco"
               },
               {
-                "title": "Contenido con texto",
-                "value": "Content with Caption"
+                "title": "Contenido con título",
+                "value": "Contenido con título"
               },
               {
-                "title": "Imagen con texto",
-                "value": "Picture with Caption"
+                "title": "Imagen con título",
+                "value": "Imagen con título"
+              },
+              {
+                "title": "Título y texto vertical",
+                "value": "Título y texto vertical"
+              },
+              {
+                "title": "Título vertical y texto",
+                "value": "Título vertical y texto"
               }
             ],
             "id": "type",
