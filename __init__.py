@@ -29,7 +29,8 @@ import sys
 base_path = tmp_global_obj["basepath"]
 cur_path = base_path + 'modules' + os.sep + \
     'OfficePowerPoint' + os.sep + 'libs' + os.sep
-sys.path.append(cur_path)
+if cur_path not in sys.path:
+    sys.path.append(cur_path)
 docto = os.path.join(cur_path.replace("libs", "bin"), "docto.exe")
 
 from pptx.util import Pt
@@ -110,6 +111,8 @@ elif module == "new_slide":
 elif module == "save":
     path = GetParams("path")
     try:
+        print(path)
+        print(prs)
         if path:
             prs.save(path)
     except Exception as e:
@@ -143,26 +146,40 @@ elif module == "write":
             ital = eval(ital)
         if under:
             under = eval(under)
-
+        slide = prs.slides[0]
         placeholders = slide.shapes
-        for placeholder in placeholders:
-            if placeholder.name.lower().startswith(type_[:-1]):
-                print(placeholder.name)
-                if type_[-1] == "2":
-                    type_ = type_[:-1]
-                    continue
-                else:
-                    text_frame = placeholder.text_frame
-                    p = text_frame.paragraphs[0]
-                    p.text = text
-                    if size:
-                        p.font.size = size
-                    p.font.bold = bold
-                    p.font.italic = ital
-                    p.font.underline = under
-                    p.alignment = align
-                    type_ = "uuuu"
-
+        #print(dir(slide.shapes.placeholders.element))
+        # shape = slide.shapes
+        p = placeholders.placeholders.element.add_placeholder(id_ = 2, name = "title", ph_type=1, orient = "horz", sz= "full", idx = 9)
+        from pptx.text.text import TextFrame
+        #p_text_frame = TextFrame(new_ph.txBody, new_ph)
+        #p = _Paragraph(new_ph.txBody.p_lst[0], new_ph)
+        print(dir(p))
+        #p = p_text_frame.paragraphs[0]
+        #print(dir(p.txBody.p_lst))
+        #print(dir(placeholders.placeholders.element))
+        """
+        list_shape = slide.shapes
+        print(len(list_shape))
+        print(dir(list_shape[0].text_frame))
+        print(len(list_shape[0].text_frame.paragraphs))
+        print(dir(list_shape[0].text_frame.paragraphs[0]))
+        list_shape[0].text_frame.paragraphs[0].text = "Buen dia chiques"
+        print(list_shape[0].text_frame.paragraphs[0].text)
+        """
+        #for pl in placeholders.placeholders:
+        #    print(pl.name)
+        #exit()
+        p.text = text
+        
+        if size:
+            p.font.size = size
+        p.font.bold = bold
+        p.font.italic = ital
+        p.font.underline = under
+        p.alignment = align
+        p.x = 500
+        p.y = 300
     except Exception as e:
         PrintException()
         raise e
@@ -177,12 +194,17 @@ elif module == "add_pic":
     pos = GetParams("position")
     height = GetParams("height")
     try:
-        placeholders = slide.shapes.placeholders
+        index = int(index)
+        if index:
+            slide = prs.slides[index]
+            slide_layout = slide
+        placeholders = slide_layout.shapes.placeholders
         list_types = []
         for type_slide in prs.slide_layouts:
             list_types.append(type_slide.name)
         if slide_layout.name == list_types[8]:
             for placeholder in placeholders:
+                print(placeholder.name.lower())
                 if "picture" in placeholder.name.lower():
                     placeholder.insert_picture(img_path)
         else:
