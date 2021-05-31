@@ -155,9 +155,10 @@
       },
       "form": {
         "css": "modal-lg",
-        "inputs": [{
-          "type": "input",
-          "placeholder": {
+        "inputs": [
+          {
+            "type": "input",
+            "placeholder": {
               "es": "res ",
               "en": "res "
             },
@@ -166,7 +167,8 @@
               "en": "Resultt"
             },
             "id": "res",
-            "css": "col-md-12"}
+            "css": "col-md-12"
+          }
         ]
       },
       "video_youtube": "",
@@ -291,54 +293,31 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "Lorem ipsum ",
-              "en": "Lorem ipsum "
+              "es": "265",
+              "en": "265"
             },
             "title": {
-              "es": "Escriba texto",
-              "en": "Write text"
+              "es": "Slide",
+              "en": "Slide"
             },
-            "help": {
-              "en": "Separate each paragraph with \\n",
-              "es": "Separe cada párrafo con \\n"
-            },
-            "id": "text",
-            "css": "col-md-12"
+            "id": "slide_index",
+            "css": "col-md-6"
           },
           {
-            "type": "select",
+            "type": "input",
             "placeholder": {
-              "es": "",
-              "en": ""
+              "es": "Content Placeholder 2",
+              "en": "Content Placeholder 2",
+              "pr": "Content Placeholder 2"
             },
             "title": {
-              "es": "Tipo de texto",
-              "en": "Text type"
+              "es": "Id o nombre del objeto donde escribirá",
+              "en": "Id or name object where will write",
+              "pr": "Id o nome do objeto onde escreverá"
             },
-            "options": [
-              {
-                "title": "Título",
-                "value": "title"
-              },
-              {
-                "title": "subtítulo",
-                "value": "subtitle"
-              },
-              {
-                "title": "Contenido 1",
-                "value": "content placeholder 1"
-              },
-              {
-                "title": "Contenido 2",
-                "value": "content placeholder 2"
-              },
-              {
-                "title": "Texto",
-                "value": "text placeholder"
-              }
-            ],
+            "options": [],
             "id": "type",
-            "css": "col-md-4"
+            "css": "col-md-6"
           },
           {
             "type": "select",
@@ -417,7 +396,7 @@
               }
             ],
             "id": "size",
-            "css": "col-md-4"
+            "css": "col-md-3"
           },
           {
             "type": "select",
@@ -431,27 +410,27 @@
             },
             "options": [
               {
-                "title": "A la Izquierda",
+                "title": "Left",
                 "value": "left"
               },
               {
-                "title": "Centrado",
+                "title": "Center",
                 "value": "center"
               },
               {
-                "title": "A la Derecha",
+                "title": "Right",
                 "value": "right"
               },
               {
-                "title": "Justificado",
+                "title": "Justify",
                 "value": "justify"
               }
             ],
             "id": "align",
-            "css": "col-md-4"
+            "css": "col-md-3"
           },
           {
-            "type": "select",
+            "type": "checkbox",
             "placeholder": {
               "es": "",
               "en": ""
@@ -471,10 +450,10 @@
               }
             ],
             "id": "bold",
-            "css": "col-md-4"
+            "css": "col-md-2"
           },
           {
-            "type": "select",
+            "type": "checkbox",
             "placeholder": {
               "es": "",
               "en": ""
@@ -494,10 +473,10 @@
               }
             ],
             "id": "italic",
-            "css": "col-md-4"
+            "css": "col-md-2"
           },
           {
-            "type": "select",
+            "type": "checkbox",
             "placeholder": {
               "es": "",
               "en": ""
@@ -517,7 +496,20 @@
               }
             ],
             "id": "underline",
-            "css": "col-md-4"
+            "css": "col-md-2"
+          },
+          {
+            "type": "textarea",
+            "placeholder": {
+              "es": "Lorem ipsum ",
+              "en": "Lorem ipsum "
+            },
+            "title": {
+              "es": "Escriba texto",
+              "en": "Write text"
+            },
+            "id": "text",
+            "css": "col-md-12"
           }
         ]
       },
@@ -672,7 +664,7 @@
         "css": "modal-lg",
         "inputs": [
           {
-            "type": "input",
+            "type": "textarea",
             "placeholder": {
               "es": "lorem ipsum",
               "en": "lorem ipsum"
@@ -727,13 +719,13 @@
     },
     {
       "en": {
-        "title": "Edit text slide",
+        "title": "Edit text",
         "description": "Modify text of existed slide.",
         "title_options": null,
         "options": null
       },
       "es": {
-        "title": "Editar texto de diapositive",
+        "title": "Editar texto",
         "description": "Modifica el texto de una diapositiva existente",
         "title_options": null,
         "options": null
@@ -741,29 +733,6 @@
       "form": {
         "css": "modal-lg",
         "inputs": [
-            {
-            "type": "select",
-            "placeholder": {
-              "es": "",
-              "en": ""
-            },
-            "title": {
-              "es": "Buscar por",
-              "en": "Search By"
-            },
-            "options": [
-              {
-                "title": "Id",
-                "value": "id"
-              },
-              {
-                "title": "Position",
-                "value": "position"
-              }
-            ],
-            "id": "searchBy",
-            "css": "col-md-6"
-          },
           {
             "type": "input",
             "placeholder": {
@@ -784,14 +753,199 @@
               "en": "0"
             },
             "title": {
-                "es": "Cuadro:",
-                "en": "Shape:"
+              "es": "Cuadro:",
+              "en": "Shape:",
+              "pr": "Cuadro"
+            },
+            "help": {
+              "es": "Puedes ingresar id o nombre del elemento",
+              "en": "Can be id or element name",
+              "pr": "Pode ser id o nome do elemento"
             },
             "id": "shape",
             "css": "col-md-6"
           },
           {
-            "type": "input",
+            "type": "select",
+            "placeholder": {
+              "es": "",
+              "en": ""
+            },
+            "title": {
+              "es": "Tamaño de fuente",
+              "en": "Font size"
+            },
+            "options": [
+              {
+                "title": "8",
+                "value": "8"
+              },
+              {
+                "title": "9",
+                "value": "9"
+              },
+              {
+                "title": "10",
+                "value": "10"
+              },
+              {
+                "title": "11",
+                "value": "11"
+              },
+              {
+                "title": "12",
+                "value": "12"
+              },
+              {
+                "title": "14",
+                "value": "14"
+              },
+              {
+                "title": "16",
+                "value": "16"
+              },
+              {
+                "title": "18",
+                "value": "18"
+              },
+              {
+                "title": "20",
+                "value": "20"
+              },
+              {
+                "title": "22",
+                "value": "22"
+              },
+              {
+                "title": "24",
+                "value": "24"
+              },
+              {
+                "title": "26",
+                "value": "26"
+              },
+              {
+                "title": "28",
+                "value": "28"
+              },
+              {
+                "title": "36",
+                "value": "36"
+              },
+              {
+                "title": "48",
+                "value": "48"
+              },
+              {
+                "title": "72",
+                "value": "72"
+              }
+            ],
+            "id": "size",
+            "css": "col-md-3"
+          },
+          {
+            "type": "select",
+            "placeholder": {
+              "es": "",
+              "en": ""
+            },
+            "title": {
+              "es": "Alineación",
+              "en": "Align"
+            },
+            "options": [
+              {
+                "title": "Left",
+                "value": "left"
+              },
+              {
+                "title": "Center",
+                "value": "center"
+              },
+              {
+                "title": "Right",
+                "value": "right"
+              },
+              {
+                "title": "Justify",
+                "value": "justify"
+              }
+            ],
+            "id": "align",
+            "css": "col-md-3"
+          },
+          {
+            "type": "checkbox",
+            "placeholder": {
+              "es": "",
+              "en": ""
+            },
+            "title": {
+              "es": "Negrita",
+              "en": "Bold"
+            },
+            "options": [
+              {
+                "title": "Si",
+                "value": "True"
+              },
+              {
+                "title": "No",
+                "value": "False"
+              }
+            ],
+            "id": "bold",
+            "css": "col-md-2"
+          },
+          {
+            "type": "checkbox",
+            "placeholder": {
+              "es": "",
+              "en": ""
+            },
+            "title": {
+              "es": "Cursiva",
+              "en": "Italic"
+            },
+            "options": [
+              {
+                "title": "Si",
+                "value": "True"
+              },
+              {
+                "title": "No",
+                "value": "False"
+              }
+            ],
+            "id": "italic",
+            "css": "col-md-2"
+          },
+          {
+            "type": "checkbox",
+            "placeholder": {
+              "es": "",
+              "en": ""
+            },
+            "title": {
+              "es": "Subrayar",
+              "en": "Underline"
+            },
+            "options": [
+              {
+                "title": "Si",
+                "value": "True"
+              },
+              {
+                "title": "No",
+                "value": "False"
+              }
+            ],
+            "id": "underline",
+            "css": "col-md-2"
+          },
+          {
+            "type": "textarea",
             "placeholder": {
               "es": "Lorem ipsum",
               "en": "Lorem ipsum"
@@ -801,7 +955,7 @@
               "en": "Text"
             },
             "id": "text",
-            "css": "col-md-6 "
+            "css": "col-md-12 "
           }
         ]
       },
@@ -865,6 +1019,105 @@
       "video_youtube": "",
       "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
       "module": "listSlides",
+      "module_name": "OfficePowerPoint",
+      "visible": true,
+      "options": false,
+      "father": "module",
+      "group": "scripts",
+      "linux": true,
+      "windows": true,
+      "mac": true,
+      "docker": true
+    },
+    {
+      "en": {
+        "title": "Edit element properties",
+        "description": "Edit a element from a slide",
+        "title_options": null,
+        "options": null
+      },
+      "es": {
+        "title": "Editar propiedades de un elemento",
+        "description": "Edita un elemento de una diapositiva",
+        "title_options": null,
+        "options": null
+      },
+      "form": {
+        "css": "modal-lg",
+        "inputs": [
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "1",
+              "en": "1"
+            },
+            "title": {
+              "es": "Numero de slide",
+              "en": "Slide index"
+            },
+            "id": "slide_index",
+            "css": "col-md-6"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "1",
+              "en": "1",
+              "pr": "1"
+            },
+            "title": {
+              "es": "Id o nombre del elemento",
+              "en": "Id or name of the element",
+              "pr": "Id o nome do elemento"
+            },
+            "options": [],
+            "id": "type",
+            "css": "col-md-6"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "x, y",
+              "en": "x,y"
+            },
+            "title": {
+              "es": "Posición",
+              "en": "Position"
+            },
+            "id": "position",
+            "css": "col-md-3"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "ancho, alto",
+              "en": "width, height"
+            },
+            "title": {
+              "es": "Dimensiones",
+              "en": "size"
+            },
+            "id": "size",
+            "css": "col-md-3"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "45.0",
+              "en": "45.0"
+            },
+            "title": {
+              "es": "Rotación",
+              "en": "Rotation"
+            },
+            "id": "rotation",
+            "css": "col-md-3"
+          }
+        ]
+      },
+      "video_youtube": "",
+      "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
+      "module": "editElement",
       "module_name": "OfficePowerPoint",
       "visible": true,
       "options": false,
