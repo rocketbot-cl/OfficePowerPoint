@@ -1,8 +1,13 @@
 {
   "author": "Danilo Toro - Rocketbot - <danilo.toro@rocketbot.cl>",
-  "description": "Modulo para controlar Microsoft Office Power Point",
+  "description": "Modulo para controlar Microsoft Office Power Point | Módulo para controlar o Microsoft PowerPoint | Module to control Microsoft Office PowerPoint",
+  "description_lang":{
+      "en":"Module to control Microsoft Office PowerPoint",
+      "es":"Modulo para controlar Microsoft Office Power Point.",
+      "pr":"Módulo para controlar o Microsoft PowerPoint."
+  },
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "0.1",
+  "version": "0.2",
   "license": "MIT",
   "homepage": "http://rocketbot.co",
   "linux": true,
@@ -14,7 +19,7 @@
   "title": {
     "en": "Office PowerPoint",
     "es": "Office PowerPoint",
-    "cn": "Office PowerPoint"
+    "pr": "Office PowerPoint"
   },
   "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNMzczLjMzNCwxMTcuMzc3Yy01Ljg5MSwwLTEwLjY2Nyw0Ljc3Ni0xMC42NjcsMTAuNjY3djY0YzAsNS44OTEsNC43NzYsMTAuNjY3LDEwLjY2NywxMC42NjdoNjQgICBjNS44OTEsMCwxMC42NjctNC43NzYsMTAuNjY3LTEwLjY2N0M0NDgsMTUwLjgwNyw0MTQuNTcxLDExNy4zNzcsMzczLjMzNCwxMTcuMzc3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik0zNzMuMzM0LDIyNC4wNDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMnYtNTIuMjQ1Yy00MC43MzMsNS43OTQtNjkuMDU2LDQzLjUxMi02My4yNjIsODQuMjQ1ICAgYzUuNzk0LDQwLjczMyw0My41MTIsNjkuMDU2LDg0LjI0NSw2My4yNjJjMzIuODEyLTQuNjY4LDU4LjU5NC0zMC40NSw2My4yNjItNjMuMjYySDM3My4zMzR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTI5NC42NTYsMTMuMDE0Yy0yLjUzMS0yLjA1Ni01Ljg2My0yLjg0Mi05LjA0NS0yLjEzM2wtMjc3LjMzMyw2NCAgIEMzLjM5Nyw3Ni4wMDMtMC4wNDcsODAuMzY5LDAsODUuMzc3djM2Mi42NjdjMC4wMDIsNS4yNjMsMy44NDMsOS43MzksOS4wNDUsMTAuNTM5bDI3Ny4zMzMsNDIuNjY3ICAgYzUuODIzLDAuODk1LDExLjI2OS0zLjA5OSwxMi4xNjQtOC45MjFjMC4wODItMC41MzUsMC4xMjQtMS4wNzYsMC4xMjQtMS42MTdWMjEuMzc3QzI5OC42NzYsMTguMTI0LDI5Ny4xOTksMTUuMDQ1LDI5NC42NTYsMTMuMDE0ICAgeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNTcyMjsiIGQ9Ik01MDEuMzM0LDQ1OC43MUgyODhjLTUuODkxLDAtMTAuNjY3LTQuNzc2LTEwLjY2Ny0xMC42NjdjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2NyAgIGgyMDIuNjY3Vjc0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1MyODIuMTA5LDUzLjM3NywyODgsNTMuMzc3aDIxMy4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2NyAgIHYzODRDNTEyLDQ1My45MzUsNTA3LjIyNSw0NTguNzEsNTAxLjMzNCw0NTguNzF6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkY1NzIyOyIgZD0iTTQzNy4zMzQsMzk0LjcxSDI4OGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N2MwLTUuODkxLDQuNzc2LTEwLjY2NywxMC42NjctMTAuNjY3ICAgaDE0OS4zMzNjNS44OTEsMCwxMC42NjcsNC43NzYsMTAuNjY3LDEwLjY2N0M0NDgsMzg5LjkzNSw0NDMuMjI1LDM5NC43MSw0MzcuMzM0LDM5NC43MXoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjU3MjI7IiBkPSJNNDM3LjMzNCwzMzAuNzFIMjg4Yy01Ljg5MSwwLTEwLjY2Ny00Ljc3Ni0xMC42NjctMTAuNjY3YzAtNS44OTEsNC43NzYtMTAuNjY3LDEwLjY2Ny0xMC42NjcgICBoMTQ5LjMzM2M1Ljg5MSwwLDEwLjY2Nyw0Ljc3NiwxMC42NjcsMTAuNjY3QzQ0OCwzMjUuOTM1LDQ0My4yMjUsMzMwLjcxLDQzNy4zMzQsMzMwLjcxeiIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGQUZBRkE7IiBkPSJNOTYsMzUyLjA0NGMtNS44OTEsMC0xMC42NjctNC43NzYtMTAuNjY3LTEwLjY2N1YxNzAuNzFjMC01Ljg5MSw0Ljc3Ni0xMC42NjcsMTAuNjY3LTEwLjY2N2g0Mi42NjcgIGMyOS40NTUsMCw1My4zMzMsMjMuODc4LDUzLjMzMyw1My4zMzN2MjEuMzMzYzAsMjkuNDU1LTIzLjg3OCw1My4zMzMtNTMuMzMzLDUzLjMzM2gtMzJ2NTMuMzMzICBDMTA2LjY2NywzNDcuMjY4LDEwMS44OTIsMzUyLjA0NCw5NiwzNTIuMDQ0eiBNMTA2LjY2NywyNjYuNzFoMzJjMTcuNjczLDAsMzItMTQuMzI3LDMyLTMydi0yMS4zMzNjMC0xNy42NzMtMTQuMzI3LTMyLTMyLTMyaC0zMiAgVjI2Ni43MXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==",
   "children": [
@@ -28,6 +33,12 @@
       "es": {
         "title": "Nueva presentación",
         "description": "Crea un nueva presentación Power Point",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Nova apresentação",
+        "description": "Crie uma nova apresentação no PowerPoin",
         "title_options": null,
         "options": null
       },
@@ -61,6 +72,12 @@
         "title_options": null,
         "options": null
       },
+      "pr": {
+        "title": "Abrir apresentação",
+        "description": "Abre uma apresentação PowerPoint",
+        "title_options": null,
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
@@ -68,15 +85,18 @@
             "type": "file_select",
             "placeholder": {
               "es": "archivo.pptx",
-              "en": "file.pptx"
+              "en": "file.pptx",
+              "pr": "arquivo.pptx"
             },
             "title": {
               "es": "Archivo:",
-              "en": "File:"
+              "en": "File:",
+              "pr": "Arquivo:"
             },
             "help": {
               "es": "Seleccione el archivo de Power Point para abrir",
-              "en": "Select Power Point file to open"
+              "en": "Select Power Point file to open",
+              "pr": "Selecione o arquivo do PowerPoint para abrir"
             },
             "id": "path",
             "css": "col-md-12"
@@ -105,7 +125,13 @@
       },
       "es": {
         "title": "Guardar presentación",
-        "description": "Guarda el presentación Power Point abierto",
+        "description": "Guarda la presentación de Power Point abierta",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Salvar apresentação",
+        "description": "Salve a apresentação do PowerPoint que estava em edição",
         "title_options": null,
         "options": null
       },
@@ -116,11 +142,13 @@
             "type": "file_new",
             "placeholder": {
               "es": "archivo.pptx",
-              "en": "file.pptx"
+              "en": "file.pptx",
+              "pr": "arquivo.pptx"
             },
             "title": {
               "es": "Guardar archivo",
-              "en": "Save file"
+              "en": "Save file",
+              "pr": "Salvar arquivo"
             },
             "id": "path",
             "css": "col-md-12"
@@ -153,6 +181,12 @@
         "title_options": null,
         "options": null
       },
+      "pr": {
+        "title": "Obter o tipo de slide",
+        "description": "Lista todos os tipos de slides disponíveis",
+        "title_options": null,
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
@@ -160,11 +194,13 @@
             "type": "input",
             "placeholder": {
               "es": "res ",
-              "en": "res "
+              "en": "res ",
+              "pr": "res "
             },
             "title": {
               "es": "Resultado",
-              "en": "Resultt"
+              "en": "Resultt",
+              "pr": "Resultado"
             },
             "id": "res",
             "css": "col-md-12"
@@ -197,6 +233,12 @@
         "title_options": null,
         "options": null
       },
+      "pr": {
+        "title": "Inserir slide",
+        "description": "Insira um novo slide na apresentação",
+        "title_options": null,
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
@@ -204,11 +246,13 @@
             "type": "select",
             "placeholder": {
               "es": "",
-              "en": ""
+              "en": "",
+              "pr": ""
             },
             "title": {
               "es": "Tipo",
-              "en": "Type"
+              "en": "Type",
+              "pr": "Tipo"
             },
             "options": [
               {
@@ -287,18 +331,26 @@
         "title_options": null,
         "options": null
       },
+      "pr": {
+        "title": "Escrever dentro da apresentação",
+        "description": "Escrever em uma apresentação do PowerPoint.",
+        "title_options": null,
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
           {
             "type": "input",
             "placeholder": {
-              "es": "265",
-              "en": "265"
+              "es": "0",
+              "en": "0",
+              "pr": "0"
             },
             "title": {
-              "es": "Slide",
-              "en": "Slide"
+              "es": "Numero de slide",
+              "en": "Slide index",
+              "pr": "Número do slide"
             },
             "id": "slide_index",
             "css": "col-md-6"
@@ -306,14 +358,14 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "Content Placeholder 2",
-              "en": "Content Placeholder 2",
-              "pr": "Content Placeholder 2"
+              "es": "Title 1",
+              "en": "Title 1",
+              "pr": "Title 1"
             },
             "title": {
-              "es": "Id o nombre del objeto donde escribirá",
-              "en": "Id or name object where will write",
-              "pr": "Id o nome do objeto onde escreverá"
+              "es": "Id o nombre del elemento donde se escribirá",
+              "en": "Id or element name where will write",
+              "pr": "ID ou nome do elemento onde será escrito"
             },
             "options": [],
             "id": "type",
@@ -322,12 +374,14 @@
           {
             "type": "select",
             "placeholder": {
-              "es": "",
-              "en": ""
+              "es": "8",
+              "en": "8",
+              "pr": "8"
             },
             "title": {
               "es": "Tamaño de fuente",
-              "en": "Font size"
+              "en": "Font size",
+              "pr": "Tamanho da fonte"
             },
             "options": [
               {
@@ -401,12 +455,14 @@
           {
             "type": "select",
             "placeholder": {
-              "es": "",
-              "en": ""
+              "es": "Center",
+              "en": "Center",
+              "pr": "Center"
             },
             "title": {
               "es": "Alineación",
-              "en": "Align"
+              "en": "Align",
+              "pr": "Alinhar"
             },
             "options": [
               {
@@ -432,12 +488,14 @@
           {
             "type": "checkbox",
             "placeholder": {
-              "es": "",
-              "en": ""
+              "es": "True",
+              "en": "True",
+              "pr": "True"
             },
             "title": {
               "es": "Negrita",
-              "en": "Bold"
+              "en": "Bold",
+              "pr": "Negrito"
             },
             "options": [
               {
@@ -455,12 +513,14 @@
           {
             "type": "checkbox",
             "placeholder": {
-              "es": "",
-              "en": ""
+              "es": "True",
+              "en": "True",
+              "pr": "True"
             },
             "title": {
               "es": "Cursiva",
-              "en": "Italic"
+              "en": "Italic",
+              "pr": "Itálico"
             },
             "options": [
               {
@@ -478,12 +538,14 @@
           {
             "type": "checkbox",
             "placeholder": {
-              "es": "",
-              "en": ""
+              "es": "True",
+              "en": "True",
+              "pr": "True"
             },
             "title": {
               "es": "Subrayar",
-              "en": "Underline"
+              "en": "Underline",
+              "pr": "Sublinhar"
             },
             "options": [
               {
@@ -502,11 +564,13 @@
             "type": "textarea",
             "placeholder": {
               "es": "Lorem ipsum ",
-              "en": "Lorem ipsum "
+              "en": "Lorem ipsum ",
+              "pr": "Lorem ipsum "
             },
             "title": {
               "es": "Escriba texto",
-              "en": "Write text"
+              "en": "Write text",
+              "pr": "Digitar texto"
             },
             "id": "text",
             "css": "col-md-12"
@@ -536,6 +600,12 @@
       "es": {
         "title": "Cerrar presentación",
         "description": "Cierra la presentación que se está ejecutando",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Fechar a apresentação",
+        "description": "Feche a apresentação que está sendo executada",
         "title_options": null,
         "options": null
       },
@@ -569,6 +639,12 @@
         "title_options": null,
         "options": null
       },
+      "pr": {
+        "title": "Adicionar imagem",
+        "description": "Adicione uma imagem à apresentação",
+        "title_options": null,
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
@@ -576,11 +652,13 @@
             "type": "file_select",
             "placeholder": {
               "es": "imagen.jpg",
-              "en": "image.jpg"
+              "en": "image.jpg",
+              "pr": "imagem.jpg"
             },
             "title": {
               "es": "Ruta de la imagen",
-              "en": "Image path"
+              "en": "Image path",
+              "pr": "Rota da imagem"
             },
             "id": "img_path",
             "css": "col-md-8"
@@ -588,12 +666,14 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "265",
-              "en": "265"
+              "es": "0",
+              "en": "0",
+              "pr": "0"
             },
             "title": {
-              "es": "Slide",
-              "en": "Slide"
+              "es": "Numero de slide",
+              "en": "Slide index",
+              "pr": "Número do slide"
             },
             "id": "slide",
             "css": "col-md-4"
@@ -602,15 +682,18 @@
             "type": "input",
             "placeholder": {
               "es": "2,4.5 ",
-              "en": "2,4.5 "
+              "en": "2,4.5 ",
+              "pr": "2,4.5 "
             },
             "title": {
               "es": "Posición",
-              "en": "Position"
+              "en": "Position",
+              "pr": "Posição"
             },
             "help": {
               "en": "First number will be upper margin, the second will be left margin",
-              "es": "Primer número será margen superior, el segundo será margen izquierdo"
+              "es": "Primer número será margen superior, el segundo será margen izquierdo",
+              "pr": "O primeiro número será a margem superior, o segundo será a margem esquerda"
             },
             "id": "position",
             "css": "col-md-6"
@@ -619,15 +702,18 @@
             "type": "input",
             "placeholder": {
               "es": "5",
-              "en": "5"
+              "en": "5",
+              "pr": "5"
             },
             "title": {
               "es": "Alto",
-              "en": "Height"
+              "en": "Height",
+              "pr": "Altura"
             },
             "help": {
               "en": "The image will keep the proportions.",
-              "es": "La imagen mantendrá las proporciones."
+              "es": "La imagen mantendrá las proporciones.",
+              "pr": "A imagem manterá as proporções."
             },
             "id": "height",
             "css": "col-md-6"
@@ -656,7 +742,13 @@
       },
       "es": {
         "title": "Agregar cuadro de texto",
-        "description": "Agrega un cuadro de texto a la presentación",
+        "description": "Agrega un cuadro de texto a la presentación.",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Adicionar caixa de texto",
+        "description": "Adicionar uma caixa de texto à apresentação.",
         "title_options": null,
         "options": null
       },
@@ -667,11 +759,13 @@
             "type": "textarea",
             "placeholder": {
               "es": "lorem ipsum",
-              "en": "lorem ipsum"
+              "en": "lorem ipsum",
+              "pr": "lorem ipsum"
             },
             "title": {
               "es": "Texto",
-              "en": "Text"
+              "en": "Text",
+              "pr": "Text"
             },
             "id": "text",
             "css": "col-md-12"
@@ -680,28 +774,48 @@
             "type": "input",
             "placeholder": {
               "es": "x, y",
-              "en": "x,y"
+              "en": "x,y",
+              "pr": "x,y"
             },
             "title": {
               "es": "Posición",
-              "en": "Position"
+              "en": "Position",
+              "pr": "Posição"
             },
             "id": "position",
-            "css": "col-md-6"
+            "css": "col-md-4"
           },
           {
             "type": "input",
             "placeholder": {
               "es": "ancho, alto",
-              "en": "width, height"
+              "en": "width, height",
+              "pr": "Largura, Altura"
             },
             "title": {
               "es": "Dimensiones",
-              "en": "size"
+              "en": "size",
+              "pr": "dimensão"
             },
             "id": "size",
-            "css": "col-md-6 "
-          }
+            "css": "col-md-4 "
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "0",
+              "en": "0",
+              "pr": "0"
+            },
+            "title": {
+              "es": "Numero de slide",
+              "en": "Slide index",
+              "pr": "Número do slide"
+            },
+            "id": "slide1",
+            "css": "col-md-4"
+          }          
+          
         ]
       },
       "video_youtube": "",
@@ -730,18 +844,27 @@
         "title_options": null,
         "options": null
       },
+      "pr": {
+        "title": "Editar texto",
+        "description": "Modifique o texto de um slide existente",
+        "title_options": null,
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
+          
           {
             "type": "input",
             "placeholder": {
-              "es": "265",
-              "en": "265"
+              "es": "0",
+              "en": "0",
+              "pr": "0"
             },
             "title": {
-              "es": "Slide",
-              "en": "Slide"
+              "es": "Numero de slide",
+              "en": "Slide index",
+              "pr": "Número do slide"
             },
             "id": "slide",
             "css": "col-md-6"
@@ -749,13 +872,14 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "0",
-              "en": "0"
+              "es": "Title 1",
+              "en": "Title 1",
+              "pr": "Title 1"
             },
             "title": {
-              "es": "Cuadro:",
+              "es": "Forma:",
               "en": "Shape:",
-              "pr": "Cuadro"
+              "pr": "Forma"
             },
             "help": {
               "es": "Puedes ingresar id o nombre del elemento",
@@ -768,12 +892,14 @@
           {
             "type": "select",
             "placeholder": {
-              "es": "",
-              "en": ""
+              "es": "8",
+              "en": "8",
+              "pr": "8"
             },
             "title": {
               "es": "Tamaño de fuente",
-              "en": "Font size"
+              "en": "Font size",
+              "pr": "Tamanho da fonte"
             },
             "options": [
               {
@@ -847,12 +973,14 @@
           {
             "type": "select",
             "placeholder": {
-              "es": "",
-              "en": ""
+              "es": "Center",
+              "en": "Center",
+              "pr": "Center"
             },
             "title": {
               "es": "Alineación",
-              "en": "Align"
+              "en": "Align",
+              "pr": "Alinhar"
             },
             "options": [
               {
@@ -878,12 +1006,14 @@
           {
             "type": "checkbox",
             "placeholder": {
-              "es": "",
-              "en": ""
+              "es": "True",
+              "en": "True",
+              "pr": "True"
             },
             "title": {
               "es": "Negrita",
-              "en": "Bold"
+              "en": "Bold",
+              "pr": "Negrito"
             },
             "options": [
               {
@@ -901,12 +1031,14 @@
           {
             "type": "checkbox",
             "placeholder": {
-              "es": "",
-              "en": ""
+              "es": "True",
+              "en": "True",
+              "pr": "True"
             },
             "title": {
               "es": "Cursiva",
-              "en": "Italic"
+              "en": "Italic",
+              "pr": "Itálico"
             },
             "options": [
               {
@@ -924,12 +1056,14 @@
           {
             "type": "checkbox",
             "placeholder": {
-              "es": "",
-              "en": ""
+              "es": "True",
+              "en": "True",
+              "pr": "True"
             },
             "title": {
               "es": "Subrayar",
-              "en": "Underline"
+              "en": "Underline",
+              "pr": "Sublinhar"
             },
             "options": [
               {
@@ -948,11 +1082,13 @@
             "type": "textarea",
             "placeholder": {
               "es": "Lorem ipsum",
-              "en": "Lorem ipsum"
+              "en": "Lorem ipsum",
+              "pr": "Lorem ipsum"
             },
             "title": {
               "es": "Texto",
-              "en": "Text"
+              "en": "Text",
+              "pr": "Texto"
             },
             "id": "text",
             "css": "col-md-12 "
@@ -974,14 +1110,20 @@
     },
     {
       "en": {
-        "title": "Get elements slides",
-        "description": "Get elements slides",
+        "title": "Get elements from the slide",
+        "description": "List the elements in the presentation",
         "title_options": null,
         "options": null
       },
       "es": {
-        "title": "Obtener elementos de presentacion",
-        "description": "Obtener elementos de presentacion",
+        "title": "Obtener elementos de la presentacion",
+        "description": "Lista los elementos que estan en la presentacion",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Obter elementos da apresentação",
+        "description": "Liste os elementos que estão na apresentação",
         "title_options": null,
         "options": null
       },
@@ -991,12 +1133,14 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "1",
-              "en": "1"
+              "es": "0",
+              "en": "0",
+              "pr": "0"
             },
             "title": {
               "es": "Numero de slide",
-              "en": "Slide index"
+              "en": "Slide index",
+              "pr": "Número do slide"
             },
             "id": "slide_index",
             "css": "col-md-12"
@@ -1005,11 +1149,13 @@
             "type": "input",
             "placeholder": {
               "es": "res",
-              "en": "res"
+              "en": "res",
+              "pr": "res"
             },
             "title": {
               "es": "Guardar resultado",
-              "en": "Save result"
+              "en": "Save result",
+              "pr": "Salvar o resultado"
             },
             "id": "res",
             "css": "col-md-12"
@@ -1032,13 +1178,19 @@
     {
       "en": {
         "title": "Edit element properties",
-        "description": "Edit a element from a slide",
+        "description": "Edit the properties of an element on a slide",
         "title_options": null,
         "options": null
       },
       "es": {
         "title": "Editar propiedades de un elemento",
-        "description": "Edita un elemento de una diapositiva",
+        "description": "Edita las propiedades de un elemento en una diapositiva",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Editar as propriedades de um elemento",
+        "description": "Edite as propriedades de um elemento em um slide",
         "title_options": null,
         "options": null
       },
@@ -1048,12 +1200,13 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "1",
-              "en": "1"
+              "es": "0",
+              "en": "0"
             },
             "title": {
               "es": "Numero de slide",
-              "en": "Slide index"
+              "en": "Slide index",
+              "pr": "Número do slide"
             },
             "id": "slide_index",
             "css": "col-md-6"
@@ -1061,13 +1214,13 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "1",
-              "en": "1",
-              "pr": "1"
+              "es": "Title 1",
+              "en": "Title 1",
+              "pr": "Title 1"
             },
             "title": {
               "es": "Id o nombre del elemento",
-              "en": "Id or name of the element",
+              "en": "Id or element name",
               "pr": "Id o nome do elemento"
             },
             "options": [],
@@ -1078,11 +1231,13 @@
             "type": "input",
             "placeholder": {
               "es": "x, y",
-              "en": "x,y"
+              "en": "x,y",
+              "pr": "x,y"
             },
             "title": {
               "es": "Posición",
-              "en": "Position"
+              "en": "Position",
+              "pr": "Posição"
             },
             "id": "position",
             "css": "col-md-3"
@@ -1091,11 +1246,13 @@
             "type": "input",
             "placeholder": {
               "es": "ancho, alto",
-              "en": "width, height"
+              "en": "width, height",
+              "pr": "Largura, Altura"
             },
             "title": {
               "es": "Dimensiones",
-              "en": "size"
+              "en": "size",
+              "pr": "Dimensão"
             },
             "id": "size",
             "css": "col-md-3"
@@ -1104,11 +1261,13 @@
             "type": "input",
             "placeholder": {
               "es": "45.0",
-              "en": "45.0"
+              "en": "45.0",
+              "pr": "45.0"
             },
             "title": {
               "es": "Rotación",
-              "en": "Rotation"
+              "en": "Rotation",
+              "pr": "Rotação"
             },
             "id": "rotation",
             "css": "col-md-3"

@@ -153,14 +153,16 @@ try:
 
         slide = prs.slides[int(slide_index)]
         shapes = slide.shapes
+
         for e in shapes:
             print(e.name)
         if not shape_index.isdigit():
             shape = find_shape(shapes, shape_index, "name")
         else:
-            shape = find_shape(shapes, shape_index)
+            #print("estoy aqui y soy", shape_index)
+            shape = find_shape(shapes, int(shape_index))
        
-        
+        print(shape)
         p = shape.text_frame.paragraphs[0]
         change_text_frame(p, text, align, bold, ital, under, size)
         
@@ -174,10 +176,10 @@ try:
         index = GetParams("slide")
         pos = GetParams("position")
         height = GetParams("height")
-
-        index = int(index)
+        #index = int(index)
         if index:
-            slide = prs.slides[index]
+            print(index)
+            slide = prs.slides[int(index)]            
             slide_layout = slide
         placeholders = slide_layout.shapes.placeholders
         list_types = []
@@ -196,12 +198,12 @@ try:
                     img_path, left=left, top=top, height=height)
             else:
                 pic = slide.shapes.add_picture(img_path, left=left, top=top)
-
+    
     elif module == "addTextbox":
         text = GetParams("text")
         position = GetParams("position")
         size = GetParams("size")
-        index = GetParams("slide")
+        index = GetParams("slide1")
         align_type = GetParams("align")
        
         is_bold = GetParams("bold")
@@ -223,8 +225,8 @@ try:
 
         # if not index.isdigit():
         #     raise Exception("Slide index is not valid")
-
-        # slide = prs.slides[int(index)]
+        if index:
+            slide = prs.slides[int(index)]
         position = position.split(",")
         size = size.split(",")
         pos = position + size
@@ -236,7 +238,7 @@ try:
         p = txt_box.text_frame.paragraphs[0]
         change_text_frame(p, text, align, bold, ital, under)
         txt_box.text_frame.text = text
-
+    
 
     elif module == "editText":
 
